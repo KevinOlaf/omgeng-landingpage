@@ -20,7 +20,6 @@ type Copy = {
   features: {
     eyebrow: string;
     title: string;
-    intro: string;
     items: [string, string][];
   };
   story: {
@@ -35,13 +34,7 @@ type Copy = {
   store: {
     eyebrow: string;
     title: string;
-    description: string;
     facts: [string, string][];
-  };
-  callout: {
-    title: string;
-    body: string;
-    cta: string;
   };
   faq: {
     eyebrow: string;
@@ -54,7 +47,6 @@ type Copy = {
     links: string;
     developer: string;
     copyright: string;
-    tagline: string;
   };
 };
 
@@ -64,7 +56,7 @@ const copy: Record<Locale, Copy> = {
       subtitle: "Personal finance for iPhone",
       features: "ฟีเจอร์",
       overview: "ภาพรวม",
-      appStore: "ข้อมูล App Store",
+      appStore: "รายละเอียด",
       support: "Support",
       privacy: "Privacy",
       terms: "Terms",
@@ -74,7 +66,7 @@ const copy: Record<Locale, Copy> = {
       title: "จดเงินเข้าออก ให้ตามชีวิตจริงของคุณ",
       description:
         "รับจ่ายจด ช่วยให้การบันทึกการเงินเร็วขึ้นด้วยการพิมพ์ พูด หรือสแกนสลิป พร้อมงบประมาณ รายงาน ปฏิทินเงินเดือน วิดเจ็ต และเครื่องมือวางแผนเงินออมในแอปเดียว",
-      primary: "ดูข้อมูลเผยแพร่แอป",
+      primary: "รายละเอียดแอป",
       secondary: "หน้าช่วยเหลือและติดต่อ",
       tags: ["เพิ่มรายการด้วยเสียงภาษาไทย", "สแกนใบเสร็จและสลิป", "นำเข้า CSV / XLSX"],
       budget: "วันนี้ใช้ไป ฿420 จากงบ ฿900",
@@ -88,8 +80,6 @@ const copy: Record<Locale, Copy> = {
     features: {
       eyebrow: "Core Features",
       title: "ครบตั้งแต่จดรายการ ไปจนถึงมองภาพการเงินระยะยาว",
-      intro:
-        "หน้าโปรโมตนี้ออกแบบให้รวมข้อมูลสำคัญสำหรับผู้ใช้และสำหรับส่งขึ้น App Store: สิ่งที่แอปทำได้จริง เหมาะกับใคร รองรับอะไร และมีหน้ากฎหมายกับหน้าช่วยเหลือพร้อมใช้งาน",
       items: [
         ["จดเร็วแบบที่ถนัด", "เพิ่มรายการได้ทั้งพิมพ์เอง ใช้เสียงภาษาไทย หรือสแกนสลิปและใบเสร็จให้แอปช่วยดึงข้อมูล"],
         ["เห็นภาพการเงินชัดเจน", "ดูสรุปรายวัน รายสัปดาห์ รายเดือน พร้อมกราฟสัดส่วนรายรับรายจ่าย แนวโน้ม และรายงานส่งออกได้"],
@@ -100,8 +90,8 @@ const copy: Record<Locale, Copy> = {
       ],
     },
     story: {
-      eyebrow: "Story",
-      title: "ข้อความที่ใช้โปรโมตแอปได้ทันที",
+      eyebrow: "วิธีใช้งาน",
+      title: "วิธีที่แอปช่วยคุณ",
       description:
         "จดรายรับรายจ่ายให้เร็วขึ้นด้วยการพิมพ์ พูด หรือสแกนสลิป ดูงบประมาณ รายงาน กระแสเงินสด และเป้าหมายการเงินในแอปเดียว",
       steps: [
@@ -123,22 +113,14 @@ const copy: Record<Locale, Copy> = {
       ],
     },
     store: {
-      eyebrow: "App Store Ready",
-      title: "ข้อมูลสำคัญสำหรับหน้าโปรโมตและการส่งขึ้นสโตร์",
-      description:
-        "โครงหน้านี้รวมลิงก์สำคัญสำหรับ App Store Connect: Support URL, Marketing site, Privacy Policy และ Terms of Use ไว้ครบในโดเมนเดียว",
+      eyebrow: "ข้อมูลแอป",
+      title: "รายละเอียดแอป",
       facts: [
         ["แพลตฟอร์ม", "iPhone (iOS)"],
         ["ภาษา", "ไทย และภาษาอื่นที่รองรับในแอป"],
         ["หมวด", "Utilities"],
         ["ความเป็นส่วนตัว", "มีหน้า Privacy Policy, Terms และ Support ครบ"],
       ],
-    },
-    callout: {
-      title: "พร้อมใช้เป็น landing page จริงและเป็นฐานข้อมูล App Store",
-      body:
-        "หากคุณนำโปรเจกต์นี้ไป deploy ที่ omgeng.app คุณจะได้ทั้งหน้าโปรโมต, หน้า support, privacy policy และ terms ที่ลิงก์ถึงกันครบในชุดเดียว",
-      cta: "ดู Privacy Policy",
     },
     faq: {
       eyebrow: "FAQ",
@@ -156,8 +138,7 @@ const copy: Record<Locale, Copy> = {
         "แอปจดรายรับรายจ่ายสำหรับ iPhone ที่ช่วยให้การติดตามงบประมาณ รายงาน และการวางแผนการเงินประจำวันทำได้ง่ายขึ้น",
       links: "ลิงก์สำคัญ",
       developer: "ผู้พัฒนา",
-      copyright: "© 2026 Ratshavarin Trinabhametr",
-      tagline: 'Marketing site for the iOS app “รับจ่ายจด”',
+      copyright: “© 2026 Ratshavarin Trinabhametr”,
     },
   },
   en: {
@@ -165,7 +146,7 @@ const copy: Record<Locale, Copy> = {
       subtitle: "Personal finance for iPhone",
       features: "Features",
       overview: "Overview",
-      appStore: "App Store Info",
+      appStore: "Details",
       support: "Support",
       privacy: "Privacy",
       terms: "Terms",
@@ -175,7 +156,7 @@ const copy: Record<Locale, Copy> = {
       title: "Track money the way real life actually happens",
       description:
         "Om Geng helps you log finances faster by typing, speaking, or scanning slips, with budgets, reports, payday planning, widgets, and savings tools in one app.",
-      primary: "View App Launch Info",
+      primary: "App Details",
       secondary: "Support and Contact",
       tags: ["Thai voice entry", "Receipt and slip scanning", "CSV / XLSX import"],
       budget: "Spent ฿420 today from a ฿900 budget",
@@ -189,8 +170,6 @@ const copy: Record<Locale, Copy> = {
     features: {
       eyebrow: "Core Features",
       title: "From daily logging to long-term financial visibility",
-      intro:
-        "This promo page is built to cover what users and App Store reviewers need: what the app really does, who it is for, what it supports, and the legal and support pages that go with it.",
       items: [
         ["Fast entry your way", "Add transactions by typing, Thai voice input, or slip and receipt scanning with assisted extraction"],
         ["Clear financial overview", "See daily, weekly, and monthly summaries with income-versus-expense charts, trends, and exportable reports"],
@@ -201,8 +180,8 @@ const copy: Record<Locale, Copy> = {
       ],
     },
     story: {
-      eyebrow: "Story",
-      title: "Launch-ready marketing copy",
+      eyebrow: "How It Works",
+      title: "How Om Geng helps you",
       description:
         "Track income and expenses faster by typing, speaking, or scanning slips. View budgets, reports, cash flow, and savings goals in one app.",
       steps: [
@@ -224,22 +203,14 @@ const copy: Record<Locale, Copy> = {
       ],
     },
     store: {
-      eyebrow: "App Store Ready",
-      title: "The key information needed for promotion and store submission",
-      description:
-        "This site structure includes the links App Store Connect typically needs: Support URL, marketing site, Privacy Policy, and Terms of Use on one domain.",
+      eyebrow: "App Details",
+      title: "About the App",
       facts: [
         ["Platform", "iPhone (iOS)"],
         ["Languages", "Thai plus additional supported in-app languages"],
         ["Category", "Utilities"],
         ["Privacy", "Privacy Policy, Terms, and Support pages included"],
       ],
-    },
-    callout: {
-      title: "Ready to serve as both a landing page and App Store support site",
-      body:
-        "If you deploy this project at omgeng.app, you get a homepage, support page, privacy policy, and terms page that are already linked together as one product site.",
-      cta: "View Privacy Policy",
     },
     faq: {
       eyebrow: "FAQ",
@@ -258,7 +229,6 @@ const copy: Record<Locale, Copy> = {
       links: "Key Links",
       developer: "Developer",
       copyright: "© 2026 Ratshavarin Trinabhametr",
-      tagline: 'Marketing site for the iOS app "รับจ่ายจด"',
     },
   },
 };
@@ -338,7 +308,6 @@ export default function HomePage() {
         <section className="section" id="features">
           <span className="eyebrow">{t.features.eyebrow}</span>
           <h2 className="section-title">{t.features.title}</h2>
-          <p className="section-copy">{t.features.intro}</p>
 
           <div className="feature-grid" style={{ marginTop: 24 }}>
             {t.features.items.map(([title, description]) => (
@@ -390,7 +359,6 @@ export default function HomePage() {
         <section className="section" id="appstore">
           <span className="eyebrow">{t.store.eyebrow}</span>
           <h2 className="section-title">{t.store.title}</h2>
-          <p className="section-copy">{t.store.description}</p>
 
           <div className="info-grid" style={{ marginTop: 24 }}>
             {t.store.facts.map(([label, value]) => (
@@ -401,18 +369,6 @@ export default function HomePage() {
             ))}
           </div>
 
-        </section>
-
-        <section className="section">
-          <div className="callout">
-            <div>
-              <strong style={{ fontSize: "1.6rem" }}>{t.callout.title}</strong>
-              <p>{t.callout.body}</p>
-            </div>
-            <Link className="button button-secondary" href="/privacy">
-              {t.callout.cta}
-            </Link>
-          </div>
         </section>
 
         <section className="section">
@@ -455,7 +411,6 @@ export default function HomePage() {
 
         <div className="footer-bottom">
           <span>{t.footer.copyright}</span>
-          <span>{t.footer.tagline}</span>
         </div>
       </footer>
     </>
