@@ -138,7 +138,7 @@ const copy: Record<Locale, Copy> = {
         "แอปจดรายรับรายจ่ายสำหรับ iPhone ที่ช่วยให้การติดตามงบประมาณ รายงาน และการวางแผนการเงินประจำวันทำได้ง่ายขึ้น",
       links: "ลิงก์สำคัญ",
       developer: "ผู้พัฒนา",
-      copyright: “© 2026 Ratshavarin Trinabhametr”,
+      copyright: "© 2026 Ratshavarin Trinabhametr",
     },
   },
   en: {
