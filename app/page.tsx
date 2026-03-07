@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { LanguageToggle } from "@/components/language-toggle";
 import { useLocale, type Locale } from "@/components/locale-provider";
@@ -271,7 +272,7 @@ export default function HomePage() {
       <header className="page-shell nav glass">
         <div className="nav-inner">
           <Link href="/" className="brand">
-            <div className="brand-mark">รจ</div>
+            <Image src="/icon.png" alt="รับจ่ายจด" width={42} height={42} className="brand-mark" />
             <div className="brand-text">
               <strong>รับจ่ายจด</strong>
               <span>{t.nav.subtitle}</span>

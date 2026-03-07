@@ -144,15 +144,11 @@ img {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
   width: 42px;
   height: 42px;
   border-radius: 14px;
-  background: linear-gradient(160deg, var(--brand) 0%, #22c1a7 100%);
-  color: white;
-  font-weight: 800;
   box-shadow: 0 12px 30px rgba(15, 118, 110, 0.22);
+  object-fit: cover;
 }
 
 .brand-text strong,
