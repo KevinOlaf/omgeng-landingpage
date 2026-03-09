@@ -1,38 +1,37 @@
 "use client";
 
 import Link from "next/link";
-import { LanguageToggle } from "@/components/language-toggle";
 import { useLocale } from "@/components/locale-provider";
 
 const copy = {
   th: {
-    pill: "Support",
-    title: "หน้าช่วยเหลือสำหรับ รับจ่ายจด",
+    pill: "ช่วยเหลือ",
+    title: "หน้าช่วยเหลือของรับจ่ายจด",
     intro:
-      "ใช้หน้านี้เป็น Support URL ใน App Store Connect ได้ทันที โดยรวมข้อมูลพื้นฐานที่ผู้ใช้ควรรู้ก่อนเริ่มใช้งานและลิงก์ไปยังหน้ากฎหมายที่เกี่ยวข้อง",
+      "หน้านี้รวบรวมข้อมูลสำคัญสำหรับการใช้งานรับจ่ายจด ทั้งวิธีเริ่มต้น คำแนะนำเบื้องต้น และลิงก์ไปยังหน้าที่เกี่ยวข้อง",
     items: [
-      ["การเริ่มต้นใช้งาน", "เริ่มจากเพิ่มรายรับหรือรายจ่ายรายการแรก ตั้งหมวดหมู่หลัก และกำหนดงบประมาณที่ต้องการติดตาม"],
-      ["นำเข้าข้อมูลเดิม", "แอปรองรับการนำเข้าจากไฟล์ CSV และ XLSX เพื่อช่วยย้ายข้อมูลธุรกรรมเดิมเข้าสู่ระบบ"],
-      ["สแกนสลิปและใบเสร็จ", "เพื่อให้ผลลัพธ์ดีขึ้น ควรใช้ภาพที่อ่านได้ชัด มีแสงเพียงพอ และตรวจสอบข้อมูลก่อนบันทึกทุกครั้ง"],
+      ["เริ่มต้นใช้งาน", "เริ่มจากเพิ่มรายรับหรือรายจ่ายรายการแรก ตั้งหมวดหมู่ที่ใช้บ่อย และกำหนดงบประมาณที่ต้องการติดตาม"],
+      ["นำเข้าข้อมูลเดิม", "แอปรองรับการนำเข้าจากไฟล์ CSV และ XLSX เพื่อช่วยย้ายข้อมูลธุรกรรมเดิมเข้ามาได้สะดวกขึ้น"],
+      ["สแกนสลิปและใบเสร็จ", "เพื่อให้ได้ผลลัพธ์ที่แม่นยำขึ้น ควรใช้ภาพที่คมชัด มีแสงเพียงพอ และตรวจสอบข้อมูลก่อนบันทึกทุกครั้ง"],
     ] as [string, string][],
-    productTitle: "ข้อมูลผลิตภัณฑ์",
+    productTitle: "ข้อมูลแอป",
     productItems: [
       "ชื่อแอป: รับจ่ายจด",
-      "แพลตฟอร์ม: iPhone (iOS)",
-      "ผู้พัฒนา: Ratshavarin Trinabhametr",
-      "ฟีเจอร์หลัก: บันทึกรายรับรายจ่าย, เสียง, OCR, งบประมาณ, รายงาน, นำเข้า/ส่งออก, Vault",
+      "แพลตฟอร์ม: iPhone และ iPad (iOS)",
+      "ฟีเจอร์หลัก: บันทึกรายรับรายจ่าย, เสียง, OCR, งบประมาณ, รายงาน PDF แบบละเอียด, นำเข้า/ส่งออก, Vault",
     ],
     guidanceTitle: "คำแนะนำเบื้องต้น",
     guidance:
-      "หากคุณพบว่าผลลัพธ์จากการรู้จำเสียงหรือการสแกนไม่ตรงทั้งหมด กรุณาตรวจสอบและแก้ไขก่อนบันทึกรายการทุกครั้ง โดยเฉพาะจำนวนเงิน หมวดหมู่ และวันที่",
+      "หากผลลัพธ์จากการรู้จำเสียงหรือการสแกนยังไม่ตรงทั้งหมด ควรตรวจสอบและแก้ไขก่อนบันทึกทุกครั้ง โดยเฉพาะจำนวนเงิน หมวดหมู่ และวันที่",
+    emailTitle: "อีเมลช่วยเหลือ",
     linksTitle: "ลิงก์ที่เกี่ยวข้อง",
-    home: "หน้าแรก / Marketing Page",
+    home: "หน้าแรก",
   },
   en: {
     pill: "Support",
-    title: "Support for Om Geng",
+    title: "Support for Budget Note",
     intro:
-      "This page is suitable to use directly as the Support URL in App Store Connect. It includes key usage guidance and links to the related legal pages.",
+      "This page brings together essential Budget Note usage guidance, support information, and links to related pages.",
     items: [
       ["Getting started", "Begin by adding your first income or expense entry, setting core categories, and defining the budgets you want to track."],
       ["Importing previous data", "The app supports CSV and XLSX imports so users can migrate existing transaction history into the app."],
@@ -40,14 +39,14 @@ const copy = {
     ] as [string, string][],
     productTitle: "Product information",
     productItems: [
-      "App name: รับจ่ายจด",
-      "Platform: iPhone (iOS)",
-      "Developer: Ratshavarin Trinabhametr",
-      "Core features: income and expense logging, voice input, OCR, budgets, reports, import/export, Vaults",
+      "App name: Budget Note",
+      "Platform: iPhone and iPad (iOS)",
+      "Core features: income and expense logging, voice input, OCR, budgets, advanced PDF reports, import/export, Vaults",
     ],
     guidanceTitle: "Basic guidance",
     guidance:
       "If speech recognition or scan extraction is not fully accurate, users should review and correct the amount, category, and date before saving each transaction.",
+    emailTitle: "Support email",
     linksTitle: "Related links",
     home: "Home / Marketing Page",
   },
@@ -60,10 +59,7 @@ export function SupportContent() {
   return (
     <main className="legal-wrap">
       <section className="support-hero">
-        <div className="nav-actions" style={{ justifyContent: "space-between" }}>
-          <span className="pill">{t.pill}</span>
-          <LanguageToggle />
-        </div>
+        <span className="pill">{t.pill}</span>
         <h1 className="section-title" style={{ marginTop: 18 }}>
           {t.title}
         </h1>
@@ -92,16 +88,21 @@ export function SupportContent() {
         <h2 style={{ marginTop: 24 }}>{t.guidanceTitle}</h2>
         <p>{t.guidance}</p>
 
+        <h2 style={{ marginTop: 24 }}>{t.emailTitle}</h2>
+        <p>
+          <a href="mailto:support@budget-note.com">support@budget-note.com</a>
+        </p>
+
         <h2 style={{ marginTop: 24 }}>{t.linksTitle}</h2>
         <ul className="meta-list" style={{ marginTop: 14 }}>
           <li>
             <Link href="/">{t.home}</Link>
           </li>
           <li>
-            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/privacy">{locale === "th" ? "นโยบายความเป็นส่วนตัว" : "Privacy Policy"}</Link>
           </li>
           <li>
-            <Link href="/terms">Terms of Use</Link>
+            <Link href="/terms">{locale === "th" ? "ข้อกำหนดการใช้งาน" : "Terms of Use"}</Link>
           </li>
         </ul>
       </section>

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { AppBar } from "@/components/app-bar";
 import { PrivacyContent } from "@/components/privacy-content";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "นโยบายความเป็นส่วนตัว",
   description: "นโยบายความเป็นส่วนตัวของแอป รับจ่ายจด",
   alternates: {
     canonical: "https://omgeng.app/privacy",
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
-  return <PrivacyContent />;
+  return (
+    <>
+      <AppBar />
+      <PrivacyContent />
+    </>
+  );
 }
