@@ -647,10 +647,30 @@ img {
   }
 
   .nav {
-    top: 10px;
+    top: 0;
+    margin-top: 0;
+    border-radius: 0;
+    padding: 10px 16px;
+    background: var(--surface);
+    backdrop-filter: blur(20px);
+    border: none;
+    border-bottom: 1px solid var(--line);
+    box-shadow: none;
   }
 
-  .nav-inner,
+  .nav-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 0;
+  }
+
   .hero-actions,
   .hero-meta,
   .footer-bottom {
@@ -665,10 +685,6 @@ img {
 
   .hero {
     padding-top: 28px;
-  }
-
-  .nav-actions {
-    width: 100%;
   }
 
   .feature-grid,

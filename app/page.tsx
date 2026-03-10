@@ -55,17 +55,17 @@ const copy: Record<Locale, Copy> = {
     nav: {
       features: "ฟีเจอร์",
       overview: "ภาพรวม",
-      appStore: "รายละเอียดแอป",
+      appStore: "ดาวน์โหลด",
       support: "ช่วยเหลือ",
       privacy: "ความเป็นส่วนตัว",
       terms: "ข้อกำหนด",
     },
     hero: {
-      pill: "แอปจดรายรับรายจ่ายสำหรับ iPhone และ iPad",
+      pill: "พร้อมให้โหลดแล้วบน App Store สำหรับ iPhone และ iPad",
       title: "จดรายรับรายจ่ายได้ง่ายขึ้นในทุกวัน",
       description:
         "รับจ่ายจด ช่วยให้คุณบันทึกรายรับรายจ่ายได้เร็วขึ้น จะพิมพ์ พูด หรือสแกนสลิปก็ทำได้ พร้อมงบประมาณ รายงาน PDF แบบละเอียด ปฏิทินเงินเดือน วิดเจ็ต และเครื่องมือวางแผนเงินออมในแอปเดียว",
-      primary: "ดูรายละเอียดแอป",
+      primary: "ดาวน์โหลดบน App Store",
       secondary: "หน้าช่วยเหลือและติดต่อ",
       tags: ["เพิ่มรายการด้วยเสียงภาษาไทย", "สแกนใบเสร็จและสลิป", "นำเข้าข้อมูลจาก CSV / XLSX"],
       budget: "วันนี้ใช้ไป ฿420 จากงบ ฿900",
@@ -112,8 +112,8 @@ const copy: Record<Locale, Copy> = {
       ],
     },
     store: {
-      eyebrow: "ข้อมูลแอป",
-      title: "รายละเอียดแอป",
+      eyebrow: "ดาวน์โหลด",
+      title: "พร้อมให้โหลดแล้วบน App Store",
       facts: [
         ["แพลตฟอร์ม", "iPhone และ iPad (iOS)"],
         ["ภาษา", "ไทย และภาษาอื่นที่รองรับในแอป"],
@@ -145,17 +145,17 @@ const copy: Record<Locale, Copy> = {
     nav: {
       features: "Features",
       overview: "Overview",
-      appStore: "Details",
+      appStore: "Download",
       support: "Support",
       privacy: "Privacy",
       terms: "Terms",
     },
     hero: {
-      pill: "A modern iPhone and iPad app for income and expense tracking",
+      pill: "Now available on the App Store for iPhone and iPad",
       title: "Track money the way real life actually happens",
       description:
         "Budget Note helps you log finances faster by typing, speaking, or scanning slips, with budgets, advanced PDF reports, payday planning, widgets, and savings tools in one app.",
-      primary: "App Details",
+      primary: "Download on the App Store",
       secondary: "Support and Contact",
       tags: ["Thai voice entry", "Receipt and slip scanning", "CSV / XLSX import"],
       budget: "Spent ฿420 today from a ฿900 budget",
@@ -202,8 +202,8 @@ const copy: Record<Locale, Copy> = {
       ],
     },
     store: {
-      eyebrow: "App Details",
-      title: "About the App",
+      eyebrow: "Download",
+      title: "Available now on the App Store",
       facts: [
         ["Platform", "iPhone and iPad (iOS)"],
         ["Languages", "Thai plus additional supported in-app languages"],
@@ -249,7 +249,7 @@ export default function HomePage() {
             <p>{t.hero.description}</p>
 
             <div className="hero-actions">
-              <a className="button button-primary" href="#appstore">
+              <a className="button button-primary" href="https://apps.apple.com/us/app/%E0%B8%A3-%E0%B8%9A%E0%B8%88-%E0%B8%B2%E0%B8%A2%E0%B8%88%E0%B8%94/id6758928110" target="_blank" rel="noopener noreferrer">
                 {t.hero.primary}
               </a>
               <Link className="button button-secondary" href="/support">
@@ -342,6 +342,12 @@ export default function HomePage() {
             ))}
           </div>
 
+          <div style={{ marginTop: 32, textAlign: "center" }}>
+            <a className="button button-primary" href="https://apps.apple.com/us/app/%E0%B8%A3-%E0%B8%9A%E0%B8%88-%E0%B8%B2%E0%B8%A2%E0%B8%88%E0%B8%94/id6758928110" target="_blank" rel="noopener noreferrer">
+              {t.hero.primary}
+            </a>
+          </div>
+
         </section>
 
         <section className="section">
@@ -366,6 +372,7 @@ export default function HomePage() {
           </div>
           <nav className="footer-links" aria-label="Footer">
             <strong>{t.footer.links}</strong>
+            <a href="https://apps.apple.com/us/app/%E0%B8%A3-%E0%B8%9A%E0%B8%88-%E0%B8%B2%E0%B8%A2%E0%B8%88%E0%B8%94/id6758928110" target="_blank" rel="noopener noreferrer">{t.nav.appStore}</a>
             <Link href="/support">{t.nav.support}</Link>
             <Link href="/privacy">{t.nav.privacy}</Link>
             <Link href="/terms">{t.nav.terms}</Link>

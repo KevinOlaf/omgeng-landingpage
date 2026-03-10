@@ -20,7 +20,7 @@ const copy: Record<Locale, AppBarCopy> = {
     subtitle: "Personal finance for iPhone and iPad",
     features: "ฟีเจอร์",
     overview: "ภาพรวม",
-    appStore: "รายละเอียดแอป",
+    appStore: "ดาวน์โหลด",
     support: "ช่วยเหลือ",
     privacy: "ความเป็นส่วนตัว",
     terms: "ข้อกำหนด",
@@ -29,7 +29,7 @@ const copy: Record<Locale, AppBarCopy> = {
     subtitle: "Personal finance for iPhone and iPad",
     features: "Features",
     overview: "Overview",
-    appStore: "Details",
+    appStore: "Download",
     support: "Support",
     privacy: "Privacy",
     terms: "Terms",
@@ -48,7 +48,8 @@ export function AppBar({ isHome = false }: { isHome?: boolean }) {
 
   const featureHref = isHome ? "#features" : "/#features";
   const overviewHref = isHome ? "#screens" : "/#screens";
-  const detailsHref = isHome ? "#appstore" : "/#appstore";
+  const appStoreUrl =
+    "https://apps.apple.com/us/app/%E0%B8%A3-%E0%B8%9A%E0%B8%88-%E0%B8%B2%E0%B8%A2%E0%B8%88%E0%B8%94/id6758928110";
 
   return (
     <header className="page-shell nav glass">
@@ -65,7 +66,7 @@ export function AppBar({ isHome = false }: { isHome?: boolean }) {
           <nav className="nav-links" aria-label="Primary">
             <Link href={featureHref}>{t.features}</Link>
             <Link href={overviewHref}>{t.overview}</Link>
-            <Link href={detailsHref}>{t.appStore}</Link>
+            <a href={appStoreUrl} target="_blank" rel="noopener noreferrer">{t.appStore}</a>
             <Link href="/support">{t.support}</Link>
             <Link href="/privacy">{t.privacy}</Link>
             <Link href="/terms">{t.terms}</Link>
