@@ -285,7 +285,7 @@ export default function HomePage() {
             <p>{t.hero.description}</p>
 
             <div className="hero-actions">
-              <a className="button button-primary" href="https://apps.apple.com/us/app/%E0%B8%A3-%E0%B8%9A%E0%B8%88-%E0%B8%B2%E0%B8%A2%E0%B8%88%E0%B8%94/id6758928110" target="_blank" rel="noopener noreferrer">
+              <a className="button button-primary" href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
                 {t.hero.primary}
               </a>
               <Link className="button button-secondary" href="/support">
@@ -368,7 +368,11 @@ export default function HomePage() {
             <div className="showcase-frame">
               <Image
                 src="/landingpage-image.png"
-                alt={locale === "th" ? "หน้าจอแอป รับจ่ายจด" : "Budget Note app screens"}
+                alt={
+                  locale === "th"
+                    ? "ตัวอย่างหน้าจอแอป รับจ่ายจด: จดรายการ สแกนสลิป และวางแผนการออม"
+                    : "Budget Note screens: logging, slip scanning, and savings planning"
+                }
                 width={1000}
                 height={1333}
                 className="app-shot-image"
@@ -407,16 +411,16 @@ export default function HomePage() {
               </a>
             </div>
 
-            <aside className="card install-bridge" aria-label={t.store.bridgeTitle}>
+            <aside className="card install-bridge">
               <Image
                 src="/appstore-qr.png"
                 alt={locale === "th" ? "QR สำหรับเปิดหน้าแอปบน App Store" : "QR code linking to the App Store listing"}
-                width={132}
-                height={132}
+                width={120}
+                height={120}
                 className="install-qr"
               />
               <div className="install-bridge-copy">
-                <strong>{t.store.bridgeTitle}</strong>
+                <h3>{t.store.bridgeTitle}</h3>
                 <span>{t.store.bridgeBody}</span>
               </div>
             </aside>
@@ -446,7 +450,7 @@ export default function HomePage() {
           </div>
           <nav className="footer-links" aria-label="Footer">
             <strong>{t.footer.links}</strong>
-            <a href="https://apps.apple.com/us/app/%E0%B8%A3-%E0%B8%9A%E0%B8%88-%E0%B8%B2%E0%B8%A2%E0%B8%88%E0%B8%94/id6758928110" target="_blank" rel="noopener noreferrer">{t.nav.appStore}</a>
+            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">{t.nav.appStore}</a>
             <Link href="/support">{t.nav.support}</Link>
             <Link href="/privacy">{t.nav.privacy}</Link>
             <Link href="/terms">{t.nav.terms}</Link>

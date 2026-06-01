@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "นโยบายความเป็นส่วนตัว",
   description: "นโยบายความเป็นส่วนตัวของแอป รับจ่ายจด",
   alternates: {
-    canonical: "https://omgeng.app/privacy",
+    canonical: "https://budget-note.com/privacy",
   },
 };
 

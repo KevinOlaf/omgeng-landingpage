@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "ข้อกำหนดการใช้งาน",
   description: "เงื่อนไขการใช้งานของแอป รับจ่ายจด",
   alternates: {
-    canonical: "https://omgeng.app/terms",
+    canonical: "https://budget-note.com/terms",
   },
 };
 

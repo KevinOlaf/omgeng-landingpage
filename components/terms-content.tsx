@@ -7,7 +7,7 @@ const copy = {
   th: {
     pill: "ข้อกำหนดการใช้งาน",
     title: "เงื่อนไขการใช้งาน",
-    intro: "ข้อกำหนดต่อไปนี้ใช้กับการเข้าถึงเว็บไซต์ omgeng.app และการใช้งานแอป รับจ่ายจด",
+    intro: "ข้อกำหนดต่อไปนี้ใช้กับการเข้าถึงเว็บไซต์ budget-note.com และการใช้งานแอป รับจ่ายจด",
     effective: "มีผลบังคับใช้: 7 มีนาคม 2026",
     sections: [
       ["1. การยอมรับเงื่อนไข", "เมื่อคุณเข้าถึงเว็บไซต์หรือใช้งานแอปนี้ ถือว่าคุณยอมรับเงื่อนไขการใช้งานฉบับนี้ หากคุณไม่ยอมรับ กรุณาหยุดใช้งาน"],
@@ -25,7 +25,7 @@ const copy = {
   en: {
     pill: "Terms of Use",
     title: "Terms of Use",
-    intro: "These terms apply to access to omgeng.app and the use of the Budget Note app.",
+    intro: "These terms apply to access to budget-note.com and the use of the Budget Note app.",
     effective: "Effective date: March 7, 2026",
     sections: [
       ["1. Acceptance of terms", "By using this website or app, you agree to these terms. If you do not agree, please stop using the service."],
