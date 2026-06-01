@@ -5,6 +5,9 @@ import Link from "next/link";
 import { AppBar } from "@/components/app-bar";
 import { useLocale, type Locale } from "@/components/locale-provider";
 
+const APP_STORE_URL =
+  "https://apps.apple.com/us/app/%E0%B8%A3-%E0%B8%9A%E0%B8%88-%E0%B8%B2%E0%B8%A2%E0%B8%88%E0%B8%94/id6758928110";
+
 type Copy = {
   nav: Record<string, string>;
   hero: {
@@ -14,6 +17,7 @@ type Copy = {
     primary: string;
     secondary: string;
     tags: string[];
+    trust: string[];
     budget: string;
     stats: [string, string][];
   };
@@ -35,6 +39,10 @@ type Copy = {
     eyebrow: string;
     title: string;
     facts: [string, string][];
+    pricingTitle: string;
+    pricingBody: string;
+    bridgeTitle: string;
+    bridgeBody: string;
   };
   faq: {
     eyebrow: string;
@@ -62,12 +70,13 @@ const copy: Record<Locale, Copy> = {
     },
     hero: {
       pill: "พร้อมให้โหลดแล้วบน App Store สำหรับ iPhone และ iPad",
-      title: "จดรายรับรายจ่ายได้ง่ายขึ้นในทุกวัน",
+      title: "แค่สแกนสลิป รายการก็จดให้อัตโนมัติ",
       description:
-        "รับจ่ายจด ช่วยให้คุณบันทึกรายรับรายจ่ายได้เร็วขึ้น จะพิมพ์ พูด หรือสแกนสลิปก็ทำได้ พร้อมงบประมาณ รายงาน PDF แบบละเอียด ปฏิทินเงินเดือน วิดเจ็ต และเครื่องมือวางแผนเงินออมในแอปเดียว",
+        "รับจ่ายจดอ่านสลิปธนาคารและใบเสร็จไทยให้อัตโนมัติ บันทึกรายการได้ในไม่กี่วินาที ประมวลผลด้วย AI บนเครื่อง ข้อมูลการเงินไม่ออกจาก iPhone ของคุณ พร้อมงบประมาณ รายงาน PDF ปฏิทินเงินเดือน และเป้าหมายการออมครบในแอปเดียว",
       primary: "ดาวน์โหลดบน App Store",
       secondary: "หน้าช่วยเหลือและติดต่อ",
       tags: ["เพิ่มรายการด้วยเสียงภาษาไทย", "สแกนใบเสร็จและสลิป", "นำเข้าข้อมูลจาก CSV / XLSX"],
+      trust: ["ประมวลผลด้วย AI บนเครื่อง", "ข้อมูลอยู่ใน iPhone ของคุณ", "ไม่ต้องสมัครบัญชี"],
       budget: "วันนี้ใช้ไป ฿420 จากงบ ฿900",
       stats: [
         ["รายรับเดือนนี้", "ติดตามรายได้หลายทาง พร้อมดูรอบเงินเข้าได้ชัดเจน"],
@@ -120,6 +129,11 @@ const copy: Record<Locale, Copy> = {
         ["หมวด", "Utilities"],
         ["ข้อมูลสำคัญ", "มีหน้าความเป็นส่วนตัว ข้อกำหนดการใช้งาน และช่วยเหลือครบ"],
       ],
+      pricingTitle: "ราคา",
+      pricingBody:
+        "ดาวน์โหลดฟรี ใช้ฟีเจอร์หลักได้ทันที ทั้งการจดรายการ งบประมาณ และรายงาน PDF แผนพรีเมียมช่วยปลดล็อกการสแกนสลิปแบบไม่จำกัด การจัดหมวดด้วย AI ที่แม่นขึ้น และไม่มีโฆษณา",
+      bridgeTitle: "ติดตั้งบน iPhone",
+      bridgeBody: "สแกน QR เพื่อเปิดหน้าแอปบน App Store ได้ทันทีจากมือถือของคุณ",
     },
     faq: {
       eyebrow: "คำถามที่พบบ่อย",
@@ -152,12 +166,13 @@ const copy: Record<Locale, Copy> = {
     },
     hero: {
       pill: "Now available on the App Store for iPhone and iPad",
-      title: "Track money the way real life actually happens",
+      title: "Snap a slip — it logs itself",
       description:
-        "Budget Note helps you log finances faster by typing, speaking, or scanning slips, with budgets, advanced PDF reports, payday planning, widgets, and savings tools in one app.",
+        "Budget Note reads Thai bank slips and receipts automatically, so logging a transaction takes seconds. The AI runs on-device — your financial data never leaves your iPhone. Plus budgets, detailed PDF reports, a payday calendar, and savings goals in one app.",
       primary: "Download on the App Store",
       secondary: "Support and Contact",
       tags: ["Thai voice entry", "Receipt and slip scanning", "CSV / XLSX import"],
+      trust: ["On-device AI", "Data stays on your iPhone", "No account needed"],
       budget: "Spent ฿420 today from a ฿900 budget",
       stats: [
         ["Monthly income", "Track multiple income sources and payday timing"],
@@ -210,6 +225,11 @@ const copy: Record<Locale, Copy> = {
         ["Category", "Utilities"],
         ["Privacy", "Privacy Policy, Terms, and Support pages included"],
       ],
+      pricingTitle: "Pricing",
+      pricingBody:
+        "Free to download — core logging, budgets, and PDF reports are usable right away. Premium unlocks unlimited slip scans, sharper on-device AI categorization, and an ad-free experience.",
+      bridgeTitle: "Install on your iPhone",
+      bridgeBody: "Scan the QR code to open the App Store on your phone.",
     },
     faq: {
       eyebrow: "FAQ",
@@ -232,6 +252,22 @@ const copy: Record<Locale, Copy> = {
     },
   },
 };
+
+function CheckIcon() {
+  return (
+    <svg className="trust-check" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true">
+      <circle cx="10" cy="10" r="10" fill="currentColor" opacity="0.14" />
+      <path
+        d="M5.8 10.5l2.6 2.6L14.2 7.3"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function HomePage() {
   const { locale } = useLocale();
@@ -264,6 +300,15 @@ export default function HomePage() {
                 </span>
               ))}
             </div>
+
+            <ul className="hero-trust" aria-label={locale === "th" ? "ความเป็นส่วนตัว" : "Privacy highlights"}>
+              {t.hero.trust.map((item) => (
+                <li className="trust-badge" key={item}>
+                  <CheckIcon />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="hero-card glass">
@@ -319,13 +364,24 @@ export default function HomePage() {
             </aside>
           </div>
 
-          <div className="screenshot-notes" style={{ marginTop: 24, gridTemplateColumns: "repeat(3, 1fr)" }}>
-            {t.story.shots.map(([title, body]) => (
-              <div className="shot-note" key={title}>
-                <strong>{title}</strong>
-                <span>{body}</span>
-              </div>
-            ))}
+          <div className="screenshot-showcase" style={{ marginTop: 24 }}>
+            <div className="showcase-frame">
+              <Image
+                src="/landingpage-image.png"
+                alt={locale === "th" ? "หน้าจอแอป รับจ่ายจด" : "Budget Note app screens"}
+                width={1000}
+                height={1333}
+                className="app-shot-image"
+              />
+            </div>
+            <div className="showcase-notes">
+              {t.story.shots.map(([title, body]) => (
+                <div className="shot-note" key={title}>
+                  <strong>{title}</strong>
+                  <span>{body}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -342,10 +398,28 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div style={{ marginTop: 32, textAlign: "center" }}>
-            <a className="button button-primary" href="https://apps.apple.com/us/app/%E0%B8%A3-%E0%B8%9A%E0%B8%88-%E0%B8%B2%E0%B8%A2%E0%B8%88%E0%B8%94/id6758928110" target="_blank" rel="noopener noreferrer">
-              {t.hero.primary}
-            </a>
+          <div className="download-panel" style={{ marginTop: 28 }}>
+            <div className="card download-main">
+              <strong>{t.store.pricingTitle}</strong>
+              <p className="store-note">{t.store.pricingBody}</p>
+              <a className="button button-primary" href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+                {t.hero.primary}
+              </a>
+            </div>
+
+            <aside className="card install-bridge" aria-label={t.store.bridgeTitle}>
+              <Image
+                src="/appstore-qr.png"
+                alt={locale === "th" ? "QR สำหรับเปิดหน้าแอปบน App Store" : "QR code linking to the App Store listing"}
+                width={132}
+                height={132}
+                className="install-qr"
+              />
+              <div className="install-bridge-copy">
+                <strong>{t.store.bridgeTitle}</strong>
+                <span>{t.store.bridgeBody}</span>
+              </div>
+            </aside>
           </div>
 
         </section>
