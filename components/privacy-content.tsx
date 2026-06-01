@@ -8,7 +8,7 @@ const copy = {
     pill: "ความเป็นส่วนตัว",
     title: "นโยบายความเป็นส่วนตัว",
     intro:
-      "เอกสารนี้อธิบายแนวทางการเก็บ ใช้ และดูแลข้อมูลเมื่อคุณใช้งานแอป รับจ่ายจด และเว็บไซต์ omgeng.app",
+      "เอกสารนี้อธิบายแนวทางการเก็บ ใช้ และดูแลข้อมูลเมื่อคุณใช้งานแอป รับจ่ายจด และเว็บไซต์ budget-note.com",
     effective: "มีผลบังคับใช้: 7 มีนาคม 2026",
     sections: [
       ["1. ข้อมูลที่แอปอาจประมวลผล", "แอปอาจประมวลผลข้อมูลที่คุณกรอกหรือสร้างขึ้นระหว่างการใช้งาน เช่น รายรับ รายจ่าย หมวดหมู่ หมายเหตุ รูปภาพสลิปหรือใบเสร็จ ข้อมูลการตั้งงบประมาณ เป้าหมายการเงิน ข้อมูลที่นำเข้า และเนื้อหาที่ใช้กับฟีเจอร์สแกนหรือผู้ช่วยภายในแอป"],
@@ -26,7 +26,7 @@ const copy = {
     pill: "Privacy Policy",
     title: "Privacy Policy",
     intro:
-      "This document explains how information may be collected, used, and protected when you use the Budget Note app and the omgeng.app website.",
+      "This document explains how information may be collected, used, and protected when you use the Budget Note app and the budget-note.com website.",
     effective: "Effective date: March 7, 2026",
     sections: [
       ["1. Data the app may process", "The app may process information you enter or generate through usage, including income, expenses, categories, notes, slip or receipt images, budget settings, financial goals, imported records, and content used with scanning or in-app assistant features."],

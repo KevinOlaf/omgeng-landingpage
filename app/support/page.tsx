@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "ช่วยเหลือ",
   description: "หน้าช่วยเหลือสำหรับแอป รับจ่ายจด",
   alternates: {
-    canonical: "https://omgeng.app/support",
+    canonical: "https://budget-note.com/support",
   },
 };
 

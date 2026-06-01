@@ -3,7 +3,10 @@ import "./globals.css";
 import { LocaleProvider } from "@/components/locale-provider";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://omgeng.app"),
+  metadataBase: new URL("https://budget-note.com"),
+  // Apple Smart App Banner — iOS Safari shows a native "OPEN / VIEW" install
+  // banner for app id 6758928110, the smoothest install path for mobile visitors.
+  itunes: { appId: "6758928110" },
   title: {
     default: "รับจ่ายจด | แอปจดรายรับรายจ่ายสำหรับ iPhone และ iPad",
     template: "%s | รับจ่ายจด",
@@ -23,7 +26,7 @@ export const metadata: Metadata = {
     title: "รับจ่ายจด",
     description:
       "จดรายรับรายจ่ายได้เร็วขึ้นด้วยการพิมพ์ พูด หรือสแกนสลิป พร้อมดูงบประมาณ รายงาน PDF กระแสเงินสด และเป้าหมายการเงินในแอปเดียว",
-    url: "https://omgeng.app",
+    url: "https://budget-note.com",
     siteName: "รับจ่ายจด",
     locale: "th_TH",
     type: "website",
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
       "จดรายรับรายจ่ายได้เร็วขึ้นด้วยการพิมพ์ พูด หรือสแกนสลิป พร้อมดูงบประมาณ รายงาน PDF กระแสเงินสด และเป้าหมายการเงินในแอปเดียว",
   },
   alternates: {
-    canonical: "https://omgeng.app",
+    canonical: "https://budget-note.com",
   },
 };
 
