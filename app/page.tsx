@@ -72,11 +72,11 @@ const copy: Record<Locale, Copy> = {
       pill: "พร้อมให้โหลดแล้วบน App Store สำหรับ iPhone และ iPad",
       title: "แค่สแกนสลิป รายการก็จดให้อัตโนมัติ",
       description:
-        "รับจ่ายจดอ่านสลิปธนาคารและใบเสร็จไทยให้อัตโนมัติ บันทึกรายการได้ในไม่กี่วินาที ประมวลผลด้วย AI บนเครื่อง ข้อมูลการเงินไม่ออกจาก iPhone ของคุณ พร้อมงบประมาณ รายงาน PDF ปฏิทินเงินเดือน และเป้าหมายการออมครบในแอปเดียว",
+        "รับจ่ายจดอ่านสลิปธนาคารและใบเสร็จไทยให้อัตโนมัติ บันทึกรายการได้ในไม่กี่วินาที AI อ่านใบเสร็จทำงานบนเครื่อง ใช้งานพื้นฐานโดยไม่ต้องสมัครบัญชี และเลือกเชื่อมต่อ ChatGPT เพื่อซิงค์ข้อมูลการเงินไปยังเซิร์ฟเวอร์ได้ พร้อมงบประมาณ รายงาน PDF ปฏิทินเงินเดือน และเป้าหมายการออมครบในแอปเดียว",
       primary: "ดาวน์โหลดบน App Store",
       secondary: "หน้าช่วยเหลือและติดต่อ",
       tags: ["เพิ่มรายการด้วยเสียงภาษาไทย", "สแกนใบเสร็จและสลิป", "นำเข้าข้อมูลจาก CSV / XLSX"],
-      trust: ["ประมวลผลด้วย AI บนเครื่อง", "ข้อมูลอยู่ใน iPhone ของคุณ", "ไม่ต้องสมัครบัญชี"],
+      trust: ["ประมวลผลด้วย AI บนเครื่อง", "เลือกเชื่อมต่อ ChatGPT ได้", "ใช้งานพื้นฐานไม่ต้องสมัครบัญชี"],
       budget: "วันนี้ใช้ไป ฿420 จากงบ ฿900",
       stats: [
         ["รายรับเดือนนี้", "ติดตามรายได้หลายทาง พร้อมดูรอบเงินเข้าได้ชัดเจน"],
@@ -168,11 +168,11 @@ const copy: Record<Locale, Copy> = {
       pill: "Now available on the App Store for iPhone and iPad",
       title: "Snap a slip — it logs itself",
       description:
-        "Budget Note reads Thai bank slips and receipts automatically, so logging a transaction takes seconds. The AI runs on-device — your financial data never leaves your iPhone. Plus budgets, detailed PDF reports, a payday calendar, and savings goals in one app.",
+        "Budget Note reads Thai bank slips and receipts automatically, so logging a transaction takes seconds. Receipt AI runs on your device. Core use needs no account; an optional ChatGPT connection uploads structured financial records. Plus budgets, detailed PDF reports, a payday calendar, and savings goals in one app.",
       primary: "Download on the App Store",
       secondary: "Support and Contact",
       tags: ["Thai voice entry", "Receipt and slip scanning", "CSV / XLSX import"],
-      trust: ["On-device AI", "Data stays on your iPhone", "No account needed"],
+      trust: ["On-device AI", "Optional ChatGPT connection", "Core use without an account"],
       budget: "Spent ฿420 today from a ฿900 budget",
       stats: [
         ["Monthly income", "Track multiple income sources and payday timing"],
