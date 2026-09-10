@@ -18,7 +18,7 @@ const copy = {
     howSteps: [
       "อัปเดตรับจ่ายจดเป็นเวอร์ชัน 1.1 ขึ้นไป แล้วไปที่ ตั้งค่า → ใช้งานกับ ChatGPT",
       "ลงชื่อเข้าใช้ด้วย Apple หรือ Google บัญชีนี้ใช้ระบุตัวคุณระหว่างแอปกับ ChatGPT เท่านั้น",
-      "ใน ChatGPT เพิ่มแอป Om-Geng แล้วลงชื่อเข้าใช้ด้วยบัญชีเดียวกัน และยอมรับสิทธิ์อ่านที่ขอ",
+      "ใน ChatGPT เพิ่มปลั๊กอิน Budget Note (รับจ่ายจด) แล้วลงชื่อเข้าใช้ด้วยบัญชีเดียวกัน และยอมรับสิทธิ์อ่านที่ขอ",
       "เปิดรับจ่ายจดหนึ่งครั้งเพื่อซิงก์ข้อมูล จากนั้นถาม ChatGPT ได้เลย",
     ],
     askTitle: "ตัวอย่างคำถาม",
@@ -57,7 +57,7 @@ const copy = {
     pill: "Use with ChatGPT",
     title: "Ask ChatGPT about your money in Budget Note",
     intro:
-      "Connect Budget Note (Om-Geng) to ChatGPT to ask about spending by category or period, look up transactions, see your portfolio value, and get cash-flow and net-worth forecasts. Everything is read-only: ChatGPT cannot add, change, delete or transfer anything.",
+      "Connect Budget Note (รับจ่ายจด on the App Store) to ChatGPT to ask about spending by category or period, look up transactions, see your portfolio value, and get cash-flow and net-worth forecasts. Everything is read-only: ChatGPT cannot add, change, delete or transfer anything.",
     cards: [
       ["Read-only", "All nine tools only read data. None can modify anything in the app or move money."],
       ["Same engine as the app", "Forecasts in ChatGPT are computed by the same engine the app uses, and every answer tells you when your data was last synced."],
@@ -67,7 +67,7 @@ const copy = {
     howSteps: [
       "Update Budget Note to version 1.1 or later and open Settings → Use with ChatGPT.",
       "Sign in with Apple or Google. This account only identifies you between the app and ChatGPT.",
-      "In ChatGPT, add the Om-Geng app, sign in with the same account, and accept the requested read permissions.",
+      "In ChatGPT, add the Budget Note plugin, sign in with the same account, and accept the requested read permissions.",
       "Open Budget Note once so it syncs, then start asking ChatGPT.",
     ],
     askTitle: "Things to ask",
